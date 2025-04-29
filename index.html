@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>syschemes</title>
+    <link rel="shortcut icon" href="./image/SYSchemes.jpeg" type="image/x-icon" class="favicon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .app-theme-default {
+            background-color: white !important;
+            color: black !important;
+        }
+
+        .app-theme-dark {
+            background-color: black !important;
+            color: white !important;
+        }
+
+        .app-theme-blue {
+            background-color: #007BFF !important;
+            color: white !important;
+        }
+
+        .pmargin {
+            margin: 0% 10% 0% 10%;
+        }
+
+        .footer {
+            margin-top: 20px;
+            height: 200px;
+            border-top-left-radius: 40%;
+            border-top-right-radius: 40%;
+            width: 100%;
+        }
+
+        .footer,
+        .copyright {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            padding: 10px 50px;
+            position: relative;
+            width: 100%;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 50%;
+            width: 10px;
+            background: black;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-content {
+            position: relative;
+        }
+
+        .timeline-item.left .timeline-content::before,
+        .timeline-item.right .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* background: #b1c0d8; */
+            z-index: 1;
+            border: 8px solid black;
+        }
+
+
+        .timeline-item.left .timeline-content::before {
+            right: -25px;
+        }
+
+        .timeline-item.right .timeline-content::before {
+            left: -25px;
+        }
+
+        .rounded {
+            border: none;
+        }
+
+        .row {
+            --bs-gutter-x: 7.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767.98px) {
+            .timeline-line {
+                left: 20px;
+            }
+
+            .timeline-item {
+                margin-bottom: 30px;
+            }
+
+            .timeline-content {
+                padding-left: 40px;
+            }
+
+            .timeline-item.left .timeline-content::before,
+            .timeline-item.right .timeline-content::before {
+                left: -35px;
+                right: auto;
+            }
+
+            .row {
+                --bs-gutter-x: 2.5rem;
+            }
+
+            .timeline-item .col-md-6.d-none.d-md-block {
+                display: none !important;
+            }
+        }
+
+
+
+        /* Animation for scroll appearance */
+        .box {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .box.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .zoomin:hover {
+            transform: scale(1.15);
+        }
+
+        .skill-list {
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 8px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .skill-list img {
+            margin-right: 4px;
+        }
+
+        .row {
+            --bs-gutter-x: 4.0rem;
+        }
+        .skill-card-text p{
+            display: inline-block;
+            margin: 5px;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 10px;
+        }
+    </style>
+
+    <script>
+        function changeTheme(themeName) {
+            var body = document.getElementById('app-body');
+            body.className = 'app-theme-' + themeName;
+        }
+
+        // Scroll animation using IntersectionObserver
+        document.addEventListener("DOMContentLoaded", function () {
+            const boxes = document.querySelectorAll('.box');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        // Optional: unobserve after animation
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            boxes.forEach(box => {
+                observer.observe(box);
+            });
+        });
+
+
+
+        const card = document.querySelector('.project-card');
+        const inner = card.querySelector('.project-card-inner');
+
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            inner.style.transform = `scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            inner.style.transform = 'scale(1) rotateX(0deg) rotateY(0deg)';
+        });
+    </script>
+
+</head>
+
+<body id="app-body" class="app-theme-default">
+    <nav class="navbar bg-dark navbar-expand-sm shadow-lg p-3 mb-5 sticky-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="brand" src="./image/SYSchemes.jpeg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <select class="form-select" onchange="changeTheme(this.value)">
+                                <option value="default">Default Theme</option>
+                                <option value="dark">Dark Theme</option>
+                                <option value="blue">Blue Theme</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Signup</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h2 class="text-center my-4">Skills</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-2 pmargin">
+        <div class="col">
+            <a href="./privateJob.html" class="text-decoration-none text-dark">
+                <div class="card h-100 box zoomin">
+                    <div class="card-body">
+                        <h5 class="card-title"style="text-align:center;">Project 1</h5>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="./privateJob.html" class="text-decoration-none text-dark">
+                <div class="card h-100 box zoomin">
+
+                    <div class="card-body">
+                        <h5 class="card-title"style="text-align:center;">Project 1</h5>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="./privateJob.html" class="text-decoration-none text-dark">
+                <div class="card h-100 box zoomin">
+
+                    <div class="card-body">
+                        <h5 class="card-title"style="text-align:center;">Project 1</h5>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                        <p class="skill-card-text" >Html</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <h2 class="text-center my-4">Experience</h2>
+    <div class="container py-5 pmargin">
+        <div class="timeline-container box">
+            <div class="timeline-line"></div>
+            <!-- Timeline Item 1 (Left) -->
+            <div class="row timeline-item left ">
+                <div class="col-md-6 timeline-content">
+                    <div class="card shadow-lg p-3 rounded box">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Jan 2020</span>
+                            <h4 class="card-title">Project Started</h4>
+                            <p class="card-text">Assembled our core team and began initial development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block"></div>
+            </div>
+
+            <!-- Timeline Item 2 (Right) -->
+            <div class="row timeline-item right">
+                <div class="col-md-6 d-none d-md-block"></div>
+                <div class="col-md-6 timeline-content">
+                    <div class="card shadow-lg p-3 rounded box">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Jun 2021</span>
+                            <h4 class="card-title">First Release</h4>
+                            <p class="card-text">Launched MVP to select beta testers with basic features.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 (Left) -->
+            <div class="row timeline-item left">
+                <div class="col-md-6 timeline-content">
+                    <div class="card shadow-lg p-3 rounded box">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Mar 2022</span>
+                            <h4 class="card-title">Public Launch</h4>
+                            <p class="card-text">Official public release with marketing campaign.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block"></div>
+            </div>
+
+            <!-- Timeline Item 4 (Right) -->
+            <div class="row timeline-item right">
+                <div class="col-md-6 d-none d-md-block"></div>
+                <div class="col-md-6 timeline-content">
+                    <div class="card shadow-lg p-3 rounded box">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Dec 2023</span>
+                            <h4 class="card-title">Major Update</h4>
+                            <p class="card-text">Added advanced features based on user feedback.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center my-4">Projects</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-2 pmargin">
+        <div class="col">
+            <a href="./privateJob.html" class="text-decoration-none text-dark">
+                <div class="card h-100 box zoomin">
+                    <img src="./images/download.jpg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="./privateJob.html" class="text-decoration-none text-dark">
+                <div class="card h-100 box zoomin">
+                    <img src="./images/download.jpg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">This is a short card description.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="./privateJob.html" class="text-decoration-none text-dark">
+                <div class="card h-100 box zoomin">
+                    <img src="./images/download.jpg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <h2 class="text-center my-4">Education</h2>
+    <p class="text-center my-4">My education has been a journey of self-discovery and growth. My educational details are
+        as follows.</p>
+    <!-- Education content goes here -->
+    <div class="container py-5 pmargin">
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <!-- Timeline Item 1 (Left) -->
+            <div class="row timeline-item left">
+                <div class="col-md-6 timeline-content">
+                    <div class="card shadow-lg p-3 rounded box">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Jan 2020</span>
+                            <h4 class="card-title">Project Started</h4>
+                            <p class="card-text">Assembled our core team and began initial development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block box">
+                    <div class="card-body" style="background-color: none;">
+                        <span class="badge  mb-2">Jan 2020</span>
+                        <h4 class="card-title">Project Started</h4>
+                        <p class="card-text">Assembled our core team and began initial development.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="footer bg-secondary-subtle">
+        <p class="copyright">© 2024, SYSchemes</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
