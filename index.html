@@ -3,322 +3,622 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
-    <link rel="shortcut icon" href="./image/SYSchemes.jpeg" type="image/x-icon" class="favicon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyam Rajput - Portfolio</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Shyam Rajput - Full Stack Developer Portfolio">
+    <meta name="description"
+        content="Professional Full Stack Developer specializing in React, Node.js, .NET, and modern web technologies. 2+ years experience building scalable web applications.">
+    <meta name="keywords"
+        content="Full Stack Developer, Web Developer, React Developer, .NET Developer, JavaScript, Python, Portfolio, Software Engineer">
+    <meta name="author" content="Shyam Rajput">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shyamrajput1487.com/">
+    <meta property="og:title" content="Shyam Rajput - Full Stack Developer Portfolio">
+    <meta property="og:description"
+        content="Professional Full Stack Developer specializing in React,Django, .NET,Angular, and modern web technologies.">
+    <meta property="og:image" content="https://shyamrajput.com/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Shyam Rajput - Full Stack Developer">
+    <meta property="og:site_name" content="Shyam Rajput Portfolio">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shyamrajput.com/">
+    <meta property="twitter:title" content="Shyam Rajput - Full Stack Developer Portfolio">
+    <meta property="twitter:description"
+        content="Professional Full Stack Developer specializing in React,Django, .NET,Angular, and modern web technologies.">
+    <meta property="twitter:image" content="https://shyamrajput.com/images/twitter-image.png">
+    <meta name="twitter:creator" content="@ShyamRajput1487">
+    <meta name="twitter:site" content="@ShyamRajput1487">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body id="app-body" class="app-theme-default">
-
-    <!-- Top banner -->
-  <div class="top-banner">
-    <div class="top-banner-text  "> &#128512; New to usability Hub : Open and closed card sorting </div>
-  </div>
-  
-
-    <nav class="navbar bg-dark navbar-expand-sm shadow-lg p-3 mb-5 sticky-top" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><span>&lt;Shyam/Rajput&gt;</span> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+<body>
+    <!-- Your existing HTML body content remains exactly the same -->
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="#"><span>&lt;Shyam/Rajput&gt;</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#skill">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#experience">Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#project">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#education">Education</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <select class="form-select" onchange="changeTheme(this.value)">
-                                <option value="default">Default Theme</option>
-                                <option value="dark">Dark Theme</option>
-                                <option value="blue">Blue Theme</option>
-                            </select>
-                        </li> -->
+                        <li class="nav-item"><a class="nav-link" href="#skill">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
-                    <div class="d-flex">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">LinkedIn Profile</a>
-                            </li>
-                        </ul>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="https://linkedin.com/in/shyam-rajput" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #0A66C2; color: white; border-radius: 50%; font-size: 1.3rem; transition: all 0.3s;"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Shyam-Rajput7788" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #333; color: white; border-radius: 50%; font-size: 1.3rem; transition: all 0.3s;"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://x.com/ShyamRajput1487" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #1DA1F2; color: white; border-radius: 50%; font-size: 1.3rem; transition: all 0.3s;"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/shyamrajput1487/" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; border-radius: 50%; font-size: 1.3rem; transition: all 0.3s;"><i
+                                class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/shyamrajput1487/" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; border-radius: 50%; font-size: 1.3rem; transition: all 0.3s;"><i
+                                class="fab fa-facebook"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>9.jpg
+        </div>
     </nav>
 
-    <!-- Skills Section Start Here -->
-    <h2 class="text-center my-4" id="skill">Skills</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-2 pmargin">
-        <div class="col">
-            <a href="./privateJob.html" class="text-decoration-none text-dark">
-                <div class="card h-100 box zoomin shadow-lg">
-                    <div class="card-body">
-                        <h5 class="card-title p-2 fs-3" style="text-align:center;">Frontend</h5>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <!-- <span class="badge text-dark text-secondary p-2 fs-6">Skills:</span> -->
-                            <span class="badge bg-light text-secondary p-3 fs-6">HTML</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">CSS</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">JavaScript</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">Bootstrap</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">C#</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">ASP.NET</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">Angular</span>
-                        </div>
+    <div class="container-fluid hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"
+                        alt="Developer workspace" class="img-fluid w-100"
+                        style="border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                </div>
+                <div class="col-12 col-md-6">
+                    <h1 class="mb-3" style="font-size: 2.5rem; font-weight: 800;">Full-Stack Developer</h1>
+                    <p class="lead mb-4" style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+                        Welcome to my portfolio! I am a dedicated Full Stack Developer with a strong passion for
+                        building modern, scalable, and user-focused web applications. With expertise in both frontend
+                        and backend technologies, I deliver seamless digital experiences.</p>
+                    <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+                        <a href="#contact"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; flex: 1; min-width: 160px; text-align: center;">Get
+                            In Touch</a>
+                        <a href="#services"
+                            style="border: 2px solid #667eea; color: #667eea; padding: 10px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; flex: 1; min-width: 160px; text-align: center;">View
+                            Services</a>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
-        <div class="col">
-            <a href="./privateJob.html" class="text-decoration-none text-dark">
-                <div class="card h-100 box zoomin shadow-lg">
-                    <div class="card-body">
-                        <h5 class="card-title p-2 fs-3" style="text-align:center;">Backend</h5>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <!-- <span class="badge text-dark text-secondary p-2 fs-6">Skills:</span> -->
-                            <span class="badge bg-light text-secondary p-3 fs-6">HTML</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">CSS</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">JavaScript</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">Bootstrap</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">C#</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">ASP.NET</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">Angular</span>
-                        </div>
-                    </div>
+    </div>
+
+    <div class="container my-5 py-5">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div style="padding: 30px; background: var(--bg-section); border-radius: 10px; transition: all 0.3s;">
+                    <h3 style="font-size: 2.5rem; font-weight: 800; color: #667eea; margin-bottom: 10px;">2+</h3>
+                    <p style="color: var(--text-secondary); font-weight: 500;">Years of Experience</p>
                 </div>
-            </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="padding: 30px; background: var(--bg-section); border-radius: 10px; transition: all 0.3s;">
+                    <h3 style="font-size: 2.5rem; font-weight: 800; color: #764ba2; margin-bottom: 10px;">5+</h3>
+                    <p style="color: var(--text-secondary); font-weight: 500;">Projects Completed</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div style="padding: 30px; background: var(--bg-section); border-radius: 10px; transition: all 0.3s;">
+                    <h3 style="font-size: 2.5rem; font-weight: 800; color: #667eea; margin-bottom: 10px;">20+</h3>
+                    <p style="color: var(--text-secondary); font-weight: 500;">Technologies Known</p>
+                </div>
+            </div>
         </div>
-        <div class="col">
-            <a href="./privateJob.html" class="text-decoration-none text-dark">
-                <div class="card h-100 box zoomin shadow-lg">
-                    <div class="card-body">
-                        <h5 class="card-title p-2 fs-3" style="text-align:center;">Others</h5>
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <!-- <span class="badge text-dark text-secondary p-2 fs-6">Skills:</span> -->
-                            <span class="badge bg-light text-secondary p-3 fs-6">HTML</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">CSS</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">Bootstrap</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">C#</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">ASP.NET</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">JavaScript</span>
-                            <span class="badge bg-light text-secondary p-3 fs-6">Angular</span>
-                        </div>
+    </div>
+
+    <div class="container my-5 py-5" id="skill">
+        <h2 class="text-center section-heading mb-5">Skills & Technologies</h2>
+        <div class="row justify-content-center g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="skill-card">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <i class="fas fa-code" style="font-size: 2.5rem; color: #667eea;"></i>
+                    </div>
+                    <h4 class="text-center">Frontend</h4>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <span class="badge skill-badge p-2">HTML</span>
+                        <span class="badge skill-badge p-2">CSS</span>
+                        <span class="badge skill-badge p-2">JavaScript</span>
+                        <span class="badge skill-badge p-2">Bootstrap</span>
+                        <span class="badge skill-badge p-2">React</span>
+                        <span class="badge skill-badge p-2">Angular</span>
                     </div>
                 </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="skill-card">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <i class="fas fa-server" style="font-size: 2.5rem; color: #764ba2;"></i>
+                    </div>
+                    <h4 class="text-center">Backend</h4>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <span class="badge skill-badge p-2">C#</span>
+                        <span class="badge skill-badge p-2">ASP.NET Core</span>
+                        <span class="badge skill-badge p-2">Web API</span>
+                        <span class="badge skill-badge p-2">Python</span>
+                        <span class="badge skill-badge p-2"></span>Django</span>
+                        <span class="badge skill-badge p-2">Django Rest Framework</span>
+                        <span class="badge skill-badge p-2">SQL Server</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="skill-card">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <i class="fas fa-tools" style="font-size: 2.5rem; color: #667eea;"></i>
+                    </div>
+                    <h4 class="text-center">Tools & Others</h4>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <span class="badge skill-badge p-2">Git</span>
+                        <span class="badge skill-badge p-2">Github</span>
+                        <span class="badge skill-badge p-2">Azure</span>
+                        <span class="badge skill-badge p-2"></span>
+                        <span class="badge skill-badge p-2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container my-5 py-5" id="services">
+        <h2 class="text-center section-heading mb-5">My Services</h2>
+        <p class="text-center lead mb-5" style="color: var(--text-secondary); max-width: 800px; margin: 0 auto;">I offer
+            comprehensive web development solutions tailored to meet your business needs. From concept to deployment, I
+            ensure high-quality, scalable, and maintainable applications.</p>
+
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4>Frontend Development</h4>
+                    <p>Create responsive, interactive, and visually appealing user interfaces using modern frameworks
+                        and best practices.</p>
+                    <ul class="service-features">
+                        <li>Responsive Web Design</li>
+                        <li>React & Angular Development</li>
+                        <li>UI/UX Implementation</li>
+                        <li>Mobile-First Approach</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Discuss Your Project <i
+                            class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h4>Backend Development</h4>
+                    <p>Build robust, secure, and scalable server-side applications with efficient database design and
+                        API development.</p>
+                    <ul class="service-features">
+                        <li>RESTful API Development</li>
+                        <li>Database Design & Management</li>
+                        <li>Server-Side Logic</li>
+                        <li>Authentication & Authorization</li>
+                        <li>Cloud Integration</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Start Backend Project <i
+                            class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h4>E-commerce Solutions</h4>
+                    <p>Develop feature-rich e-commerce platforms with secure payment integration, inventory management,
+                        and analytics.</p>
+                    <ul class="service-features">
+                        <li>Online Store Development</li>
+                        <li>Payment Gateway Integration</li>
+                        <li>Product Management</li>
+                        <li>Order Processing System</li>
+                        <li>Security & Compliance</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Build Your Store <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Progressive Web Apps</h4>
+                    <p>Create fast, reliable, and engaging Progressive Web Applications that work seamlessly across all
+                        devices.</p>
+                    <ul class="service-features">
+                        <li>Offline Functionality</li>
+                        <li>Push Notifications</li>
+                        <li>App-like Experience</li>
+                        <li>Installable on Devices</li>
+                        <li>Cross-Platform Compatibility</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Create PWA <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Maintenance & Support</h4>
+                    <p>Ensure your applications run smoothly with regular updates, bug fixes, security patches, and
+                        performance monitoring.</p>
+                    <ul class="service-features">
+                        <li>Bug Fixing & Updates</li>
+                        <li>Performance Monitoring</li>
+                        <li>Security Audits</li>
+                        <li>Technical Support</li>
+                        <li>Version Upgrades</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Get Support <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>Cloud Deployment</h4>
+                    <p>Deploy, manage, and scale your applications on cloud platforms with optimized performance and
+                        reliability.</p>
+                    <ul class="service-features">
+                        <li>Cloud Architecture Design</li>
+                        <li>Server Configuration</li>
+                        <li>CI/CD Pipeline Setup</li>
+                        <li>Scalability Solutions</li>
+                        <li>Monitoring & Analytics</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Deploy to Cloud <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 pt-5">
+            <a href="#contact" class="btn btn-primary btn-lg" style="padding: 12px 40px; font-weight: 600;">
+                <i class="fas fa-calendar-check me-2"></i> Schedule a Consultation
             </a>
         </div>
     </div>
 
+    <!-- Experience Section - Fixed for Mobile -->
+    <div class="container my-5 py-5" id="experience">
+        <h2 class="text-center section-heading">Professional Experience</h2>
+        <div class="timeline">
 
+             <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="timeline-content">
+                        <h4>Software Engineer</h4>
+                        <p class="fw-bold">Kollmee Technologies(opc)Pvt. Ltd.</p>
+                        <span class="badge bg-primary">Dec 2025 - Present</span>
+                        <p style="margin-top: 10px;">As a Software Engineer, gained foundational and practical expertise in application development, debugging, unit/integration testing, and R&D-driven problem-solving.
+Implemented and optimized code for performance, reliability, and scalability.</p>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Experience Section Start Here -->
-    <h2 class="text-center my-4" id="experience">Experience</h2>
-    <div class="container py-5 pmargin">
-        <div class="timeline-container box">
-            <div class="timeline-line"></div>
-            <!-- Timeline Item 1 (Left) -->
-            <div class="row timeline-item left ">
-                <div class="col-md-6 timeline-content">
-                    <div class="card shadow-lg p-3 rounded box">
-                        <div class="card-body">
-                            <h4 class="card-title fs-3">Frontend developer</h4>
-                            <p>Naresh I Technology</p>
-                            <span class="badge bg-primary mb-2">Jan 2020</span>
-                            <p class="card-text">Gained foundational knowledge in modern web development tools and
-                                frameworks, deploying applications on Vercel Implemented dynamic and responsive web
-                                designs using HTML5, Tailwind CSS, and JavaScript Participated in code reviews and team
-                                meetings to optimize project workflows and development efficiency functional teams to
-                                integrate new features and improve product offering</p>
-                            <div class="d-flex flex-wrap justify-content-center gap-2">
-                                <span class="badge text-dark text-secondary p-2 fs-6">Skills:</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">HTML</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">CSS</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">JavaScript</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">Bootstrap</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">C#</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">ASP.NET</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">Angular</span>
+            <div class="timeline-item">
+                <div class="timeline-left">
+                    <div class="timeline-content">
+                        <h4>Full Stack Developer</h4>
+                        <p class="fw-bold">JBH Tech Innovation</p>
+                        <span class="badge bg-primary">Jan 2025 - Nov 2025</span>
+                        <p style="margin-top: 10px;">Gained foundational knowledge in modern web development.
+                            Implemented dynamic and responsive designs using HTML5, CSS, and JavaScript, Python, Django, Django Rest Framework</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-right">
+                    <div class="timeline-content">
+                        <h4>.Net Full Stack Developer</h4>
+                        <p class="fw-bold">Naresh I Technology</p>
+                        <span class="badge bg-primary">Aug 2024 - Jan 2025</span>
+                        <p style="margin-top: 10px;">Developed end-to-end web applications using modern frameworks.
+                            Implemented RESTful APIs and database solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section - Fixed for Mobile -->
+    <div class="container my-5 py-5" id="project">
+        <h2 class="text-center section-heading mb-5">Featured Projects</h2>
+        <div class="row justify-content-center g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=400&h=250&fit=crop"
+                            class="w-100" alt="Learning Platform" style="transition: transform 0.3s;">
+                        <div
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(102, 126, 234, 0.9); padding: 8px 15px; border-radius: 20px; color: white; font-size: 0.85rem; font-weight: 600;">
+                            Featured</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge skill-badge p-2">Python</span>
+                            <span class="badge skill-badge p-2">Django</span>
+                        </div>
+                        <h5>Online Learning Platform</h5>
+                        <p>E-learning platform with course management, video streaming, and interactive quizzes. Built
+                            with Django framework.</p>
+                        <a href="https://github.com/Shyam-Rajput7788/Online-Learning-App" style="color: #667eea; text-decoration: none; font-weight: 500;">View Project <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&h=250&fit=crop"
+                            class="w-100" alt="AI Image Generator" style="transition: transform 0.3s;">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge skill-badge p-2">JavaScript</span>
+                            <span class="badge skill-badge p-2">API</span>
+                        </div>
+                        <h5>AI Image Generator</h5>
+                        <p>AI-powered text-to-image generator with custom prompts, image variations, and download
+                            functionality.</p>
+                        <a href="#" style="color: #667eea; text-decoration: none; font-weight: 500;">View Project <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=250&fit=crop"
+                            class="w-100" alt="E-commerce" style="transition: transform 0.3s;">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge skill-badge p-2">Angular</span>
+                            <span class="badge skill-badge p-2">REST API</span>
+                        </div>
+                        <h5>E-commerce Platform</h5>
+                        <p>Full-featured e-commerce with product catalog, shopping cart, payment integration, and order
+                            management.</p>
+                        <a href="#" style="color: #667eea; text-decoration: none; font-weight: 500;">View Project <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section - Fixed for Mobile -->
+    <div class="container my-5 py-5" id="education">
+        <h2 class="text-center section-heading mb-5">Education & Certifications</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-left">
+                            <div class="timeline-content">
+                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                    <i class="fas fa-graduation-cap"
+                                        style="font-size: 1.8rem; color: #667eea; margin-right: 15px;"></i>
+                                    <div>
+                                        <h4 style="margin: 0;">Bachelor of Technology (B.Tech)</h4>
+                                        <p class="fw-bold mb-0" style="color: #667eea; font-size: 0.95rem;">Computer
+                                            Science Engineering</p>
+                                    </div>
+                                </div>
+                                <p class="fw-bold">Dr A.P.J. Abdul Kalam Technical University (AKTU)</p>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;"><i
+                                        class="fas fa-calendar-alt"></i> September 2020 - August 2024</p>
+                                <div
+                                    style="background: var(--bg-section); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                                    <p style="margin: 0; color: var(--text-primary); font-weight: 500;">CGPA: <span
+                                            style="color: #667eea; font-weight: 700;">7.69 / 10</span></p>
+                                </div>
+                                <p style="margin: 15px 0 0 0; color: var(--text-secondary); line-height: 1.6;">Completed
+                                    a comprehensive 4-year degree program with strong academic performance. Coursework
+                                    includes Data Structures, Algorithms, Object-Oriented Programming, Database
+                                    Management Systems, Operating Systems, Computer Networks, Web Development, and
+                                    Software Engineering.</p>
+                                <div style="margin-top: 15px;">
+                                    <span class="badge skill-badge p-2 me-2">Data Structures</span>
+                                    <span class="badge skill-badge p-2 me-2">Algorithms</span>
+                                    <span class="badge skill-badge p-2 me-2">DBMS</span>
+                                    <span class="badge skill-badge p-2 me-2">OOP</span>
+                                    <span class="badge skill-badge p-2 me-2">Web Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-right">
+                            <div class="timeline-content">
+                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                    <i class="fas fa-certificate"
+                                        style="font-size: 1.8rem; color: #764ba2; margin-right: 15px;"></i>
+                                    <div>
+                                        <h4 style="margin: 0;">Full Stack Web Development</h4>
+                                        <p class="fw-bold mb-0" style="color: #764ba2; font-size: 0.95rem;">Professional
+                                            Certification</p>
+                                    </div>
+                                </div>
+                                <p class="fw-bold">Naresh I Technology</p>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;"><i
+                                        class="fas fa-calendar-alt"></i> January 2020 - December 2020</p>
+                                <div
+                                    style="background: var(--bg-section); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                                    <p style="margin: 0; color: var(--text-primary); font-weight: 500;">Status: <span
+                                            style="color: #764ba2; font-weight: 700;">Completed</span></p>
+                                </div>
+                                <p style="margin: 15px 0 0 0; color: var(--text-secondary); line-height: 1.6;">Intensive
+                                    professional training program covering both frontend and backend development. Gained
+                                    practical experience building real-world applications and best practices in software
+                                    development.</p>
+                                <div style="margin-top: 15px;">
+                                    <span class="badge skill-badge p-2 me-2">React</span>
+                                    <span class="badge skill-badge p-2 me-2">Node.js</span>
+                                    <span class="badge skill-badge p-2 me-2">MongoDB</span>
+                                    <span class="badge skill-badge p-2 me-2">REST API</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 d-none d-md-block"></div>
-            </div>
-            <!-- Timeline Item 2 (Right) -->
-            <div class="row timeline-item right">
-                <div class="col-md-6 d-none d-md-block"></div>
-                <div class="col-md-6 timeline-content">
-                    <div class="card shadow-lg p-3 rounded box">
-                        <div class="card-body">
-                            <h4 class="card-title fs-3">Frontend developer</h4>
-                            <p>Naresh I Technology</p>
-                            <span class="badge bg-primary mb-2">Jan 2020</span>
-                            <p class="card-text">Gained foundational knowledge in modern web development tools and
-                                frameworks, deploying applications on Vercel Implemented dynamic and responsive web
-                                designs using HTML5, Tailwind CSS, and JavaScript Participated in code reviews and team
-                                meetings to optimize project workflows and development efficiency functional teams to
-                                integrate new features and improve product offering</p>
-                            <div class="d-flex flex-wrap justify-content-center gap-2">
-                                <span class="badge text-dark text-secondary p-2 fs-6">Skills:</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">HTML</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">CSS</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">JavaScript</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">Bootstrap</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">C#</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">ASP.NET</span>
-                                <span class="badge bg-light text-secondary p-2 fs-6">Angular</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
+    <div class="container my-5 py-5" id="contact">
+        <h2 class="text-center section-heading mb-3">Get In Touch</h2>
+        <p class="text-center lead mb-5" style="color: var(--text-secondary); font-size: 1.1rem;">Have a project in
+            mind? Let's collaborate and bring your ideas to life!</p>
 
-    <!-- Projects Section Start Here -->
-    <h2 class="text-center my-4 " id="project">Projects</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-2 pmargin">
-        <div class="col">
-            <a href="./privateJob.html" class="text-decoration-none text-dark">
-                <div class="card h-100 box zoomin shadow-lg">
-                    <img src="./images/download.jpg" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <span class="badge bg-light text-secondary p-2 fs-6">HTML</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">CSS</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">JavaScript</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">Bootstrap</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">C#</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">ASP.NET</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">Angular</span>
-                        </div>
-                        <h5 class="card-title pt-2 fs-4">E-Commerce Platform – REST API</h5>
-                        <p class="card-text">Developed a responsive platform ensuring seamless user interaction.
-                            Leveraged React Hooks and Context API for efficient state management and a smoother user
-                            experience.</p>
-                    </div>
+        <form class="contact-form" id="contactForm">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
                 </div>
-            </a>
-        </div>
-        <div class="col">
-            <a href="./privateJob.html" class="text-decoration-none text-dark">
-                <div class="card h-100 box zoomin shadow-lg">
-                    <img src="./images/download.jpg" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <span class="badge bg-light text-secondary p-2 fs-6">HTML</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">CSS</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">JavaScript</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">Bootstrap</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">C#</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">ASP.NET</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">Angular</span>
-                        </div>
-                        <h5 class="card-title pt-2 fs-4">E-Commerce Platform – REST API</h5>
-                        <p class="card-text">Developed a responsive platform ensuring seamless user interaction.
-                            Leveraged React Hooks and Context API for efficient state management and a smoother user
-                            experience.</p>
-                    </div>
+                <div class="col-md-6 mb-4">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com"
+                        required>
                 </div>
-            </a>
-        </div>
-        <div class="col">
-            <a href="./privateJob.html" class="text-decoration-none text-dark">
-                <div class="card h-100 box zoomin shadow-lg">
-                    <img src="./images/download.jpg" class="card-img-top" alt="Project 3">
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <span class="badge bg-light text-secondary p-2 fs-6">HTML</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">CSS</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">JavaScript</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">Bootstrap</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">C#</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">ASP.NET</span>
-                            <span class="badge bg-light text-secondary p-2 fs-6">Angular</span>
-                        </div>
-                        <h5 class="card-title pt-2 fs-4">E-Commerce Platform – REST API</h5>
-                        <p class="card-text">Developed a responsive platform ensuring seamless user interaction.
-                            Leveraged React Hooks and Context API for efficient state management and a smoother user
-                            experience.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="6"
+                    placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn"
+                    style="padding: 12px 50px; font-weight: 600; font-size: 1.1rem;">
+                    Send Message <i class="fas fa-paper-plane ms-2"></i>
+                </button>
+            </div>
+        </form>
 
-
-
-    <!-- Education Section Start Here -->
-    <h2 class="text-center my-4" id="education">Education</h2>
-    <p class="text-center my-4" style="font-size: 22px;">My education has been a journey of self-discovery and growth.
-        My educational details are
-        as follows.</p>
-    <!-- Education content goes here -->
-    <div class="container py-5 pmargin">
-        <div class="timeline-container box">
-            <div class="timeline-line"></div>
-            <!-- Timeline Item 1 (Left) -->
-            <div class="row timeline-item left ">
-                <div class="col-md-6 timeline-content">
-                    <div class="card shadow-lg p-3 rounded box">
-                        <div class="card-body">
-                            <h4 class="card-title">Dr A.P.J. Abdul Kalam Technical University (AKTU), India</h4>
-                            <p class="card-text">Bachelor of Computer Science - BTech, Computer Science</p>
-                            <p>September 2020 - August 2024</p>
-                            <p>I have completed 4 years and have a CGPA of 7.69 . I have taken courses in Data
-                                Structures, Algorithms, Object-Oriented Programming, Database Management Systems,
-                                Operating Systems, and Computer Networks, among others.</p>
-                        </div>
-                    </div>
+        <div class="row mt-5 pt-5">
+            <div class="col-md-4 text-center mb-4">
+                <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                    <i class="fas fa-envelope" style="color: white; font-size: 1.5rem;"></i>
                 </div>
-                <div class="col-md-6 d-none d-md-block">
-
+                <h5>Email</h5>
+                <p style="color: var(--text-secondary);">shyam.rajput@example.com</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                    <i class="fas fa-phone" style="color: white; font-size: 1.5rem;"></i>
                 </div>
+                <h5>Phone</h5>
+                <p style="color: var(--text-secondary);">+91 98765 43210</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                    <i class="fas fa-map-marker-alt" style="color: white; font-size: 1.5rem;"></i>
+                </div>
+                <h5>Location</h5>
+                <p style="color: var(--text-secondary);">Gurugram, Haryana, India</p>
             </div>
         </div>
     </div>
 
-
-
-    <!-- Conact section start here -->
-    <h2 class="text-center my-4" id="contact">Contact</h2>
-    <div class="container py-5 pmargin">
-        <div class="timeline-container box">
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-6">
+                    <p style="margin: 0; font-weight: 500;">Follow Me On Social Media</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="https://linkedin.com/in/shyam-rajput" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #0A66C2; color: white; border-radius: 50%; margin: 0 8px; text-decoration: none; font-size: 1.1rem;"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/shyamrajput" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #333; color: white; border-radius: 50%; margin: 0 8px; text-decoration: none; font-size: 1.1rem;"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://x.com/ShyamRajput1487" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #1DA1F2; color: white; border-radius: 50%; margin: 0 8px; text-decoration: none; font-size: 1.1rem;"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shyamrajput1487/" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; border-radius: 50%; margin: 0 8px; text-decoration: none; font-size: 1.1rem;"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr style="border-color: var(--border-color);">
+            <p class="text-center mb-0" style="color: var(--text-secondary); font-size: 0.9rem;">Copyright 2024 Shyam
+                Rajput. All rights reserved. | Designed & Developed with <i class="fas fa-heart"
+                    style="color: #E4405F;"></i> by Shyam Rajput</p>
         </div>
-    </div>
+    </footer>
 
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
 
-    <!-- Footer section start Here -->
-    <div class="footer bg-secondary-subtle">
-        <p class="copyright">© 2024, SYSchemes</p>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./javascript/script.js"></script>
 </body>
 
