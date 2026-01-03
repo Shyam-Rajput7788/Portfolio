@@ -1,5 +1,4 @@
-  
-        /* Your existing CSS styles remain the same with mobile fixes added */
+        /* Reset and Base Styles */
         :root {
             --bg-body: #ffffff;
             --bg-section: #f8f9fa;
@@ -19,22 +18,25 @@
         }
 
         * {
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         body {
             background-color: var(--bg-body);
             color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
         }
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 70px;
+            scroll-padding-top: 60px;
         }
 
+        /* ===== NAVBAR FIXES ===== */
         .navbar {
             background-color: var(--bg-card) !important;
             border-bottom: 1px solid var(--border-color);
+            min-height: 60px;
         }
 
         .navbar-brand span {
@@ -45,6 +47,7 @@
             font-weight: 700;
         }
 
+        /* FIXED: Nav link colors for both themes */
         .navbar .nav-link {
             color: var(--text-primary) !important;
             font-weight: 500;
@@ -54,11 +57,84 @@
             color: #764ba2 !important;
         }
 
+        /* FIXED: Toggler icon color */
+        .navbar-toggler {
+            border-color: var(--border-color) !important;
+            padding: 4px 8px;
+        }
+
+
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(102, 126, 234, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+
+        body.dark-theme .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(102, 126, 234, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+
+        /* FIXED: Offcanvas styling */
+        .offcanvas {
+            background-color: var(--bg-card) !important;
+        }
+
+        .offcanvas-header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+        }
+
+        .offcanvas-title {
+            color: var(--text-primary) !important;
+            font-weight: 600;
+        }
+
+        .btn-close {
+            filter: none !important;
+            opacity: 0.8;
+        }
+
+        body.dark-theme .btn-close {
+            filter: invert(1) !important;
+        }
+
+        .offcanvas-body {
+            padding: 1.5rem !important;
+        }
+
+        .offcanvas-body .navbar-nav {
+            gap: 10px !important;
+        }
+
+        .offcanvas-body .navbar-nav .nav-link {
+            color: var(--text-primary) !important;
+            padding: 10px 15px !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .offcanvas-body .navbar-nav .nav-link:hover {
+            background-color: var(--bg-section);
+            color: #764ba2 !important;
+        }
+
+        .offcanvas-body .d-flex {
+            justify-content: center !important;
+            margin-top: 5px !important;
+            gap: 15px !important;
+        }
+
+        /* Reduce nav link padding */
+        .navbar-nav .nav-link {
+            padding: 0.4rem 0.8rem !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== HERO SECTION ===== */
         .hero-section {
             background-color: var(--bg-section);
-            padding: 60px 20px;
+            padding: 35px 20px;
             border-radius: 15px;
-            margin: 20px auto;
+            margin: 15px auto;
         }
 
         .hero-section img {
@@ -75,7 +151,7 @@
             margin-bottom: 40px;
         }
 
-        /* Service Section Styles */
+        /* ===== SERVICE SECTION STYLES ===== */
         .service-card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -101,7 +177,6 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             z-index: 2;
         }
 
@@ -165,6 +240,7 @@
             transform: translateX(5px);
         }
 
+        /* ===== SKILL CARDS ===== */
         .skill-card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -300,6 +376,7 @@
             color: var(--text-primary);
         }
 
+        /* ===== PROJECT CARDS ===== */
         .project-card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -337,6 +414,7 @@
             font-size: 0.95rem;
         }
 
+        /* ===== CONTACT FORM ===== */
         .contact-form {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -374,10 +452,10 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
+        /* ===== FOOTER ===== */
         .footer {
             background-color: var(--bg-card);
             border-top: 1px solid var(--border-color);
-            margin-top: 60px;
         }
 
         .footer p {
@@ -386,6 +464,7 @@
             padding: 30px 0;
         }
 
+        /* ===== THEME TOGGLE BUTTON ===== */
         .theme-toggle {
             position: fixed;
             bottom: 30px;
@@ -401,6 +480,7 @@
             justify-content: center;
             z-index: 9999;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
 
         .theme-toggle:hover {
@@ -412,11 +492,7 @@
             color: #ffffff;
         }
 
-        body.dark-theme .btn-close {
-            filter: invert(1);
-        }
-
-        /* Custom alert styling */
+        /* ===== CUSTOM ALERT ===== */
         .custom-alert {
             position: fixed;
             top: 20px;
@@ -431,6 +507,7 @@
                 transform: translateX(100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateX(0);
                 opacity: 1;
@@ -439,34 +516,40 @@
 
         /* ===== MOBILE RESPONSIVE FIXES ===== */
         @media screen and (max-width: 768px) {
+
             /* Fix for navbar overlapping */
-            #skill, #services, #experience, #project, #education, #contact {
-                scroll-margin-top: 70px;
+            #skill,
+            #services,
+            #experience,
+            #project,
+            #education,
+            #contact {
+                scroll-margin-top: 60px;
             }
-            
+
             /* Mobile Timeline Fix */
             .timeline::before {
-                left: 30px !important; /* Move center line to left on mobile */
+                left: 30px !important;
                 transform: none;
             }
-            
+
             .timeline-item::before {
-                left: 30px !important; /* Move dots to left */
+                left: 30px !important;
                 transform: none;
             }
-            
+
             .timeline-left,
             .timeline-right {
                 text-align: left !important;
-                padding-left: 70px !important; /* Add left padding for content */
-                padding-right: 20px !important; /* Add right padding */
+                padding-left: 70px !important;
+                padding-right: 20px !important;
                 width: 100%;
             }
-            
+
             .timeline-content {
                 margin: 0;
             }
-            
+
             .timeline-left .timeline-content::after {
                 right: auto;
                 left: -15px;
@@ -475,32 +558,32 @@
                 border-top: 8px solid transparent;
                 border-bottom: 8px solid transparent;
             }
-            
+
             .timeline-right .timeline-content::after {
                 left: -15px;
                 border-right: 15px solid var(--bg-card);
             }
-            
+
             /* Fix hero section on mobile */
             .hero-section {
-                padding: 40px 15px;
+                padding: 30px 15px;
             }
-            
+
             .hero-section img {
                 margin-bottom: 30px;
             }
-            
+
             /* Fix service cards on mobile */
             .service-card {
                 padding: 30px 20px;
                 margin-bottom: 20px;
             }
-            
+
             /* Fix contact form on mobile */
             .contact-form {
                 padding: 25px 20px;
             }
-            
+
             /* Fix theme toggle on mobile */
             .theme-toggle {
                 bottom: 20px;
@@ -508,187 +591,174 @@
                 width: 50px;
                 height: 50px;
             }
-            
+
             .theme-toggle i {
                 font-size: 20px;
             }
-            
+
             /* Fix footer social icons */
             .footer .text-end {
                 text-align: center !important;
                 margin-top: 15px;
             }
-            
+
             /* Fix project cards layout */
             .project-card {
                 max-width: 100%;
                 margin-bottom: 30px;
             }
-            
+
             /* Fix skill cards height */
             .skill-card {
                 height: auto;
                 min-height: 250px;
                 margin-bottom: 20px;
             }
-            
+
             /* Fix statistics section */
             .container.my-5.py-5 {
                 padding-top: 40px !important;
-                padding-bottom: 40px !important;
+                padding-bottom: 20px !important;
                 margin-top: 30px !important;
-                margin-bottom: 30px !important;
+            }
+
+            /* Fix navbar toggler visibility */
+            .navbar-toggler {
+                display: block !important;
             }
         }
 
         @media screen and (max-width: 576px) {
+
             /* Extra small devices */
             .hero-section h1 {
                 font-size: 2rem !important;
             }
-            
+
             .hero-section .lead {
                 font-size: 1rem !important;
             }
-            
+
             .section-heading {
                 font-size: 1.8rem;
                 margin-bottom: 30px;
             }
-            
+
             .timeline-left,
             .timeline-right {
                 padding-left: 60px !important;
                 padding-right: 15px !important;
             }
-            
+
             .timeline::before {
                 left: 25px !important;
             }
-            
+
             .timeline-item::before {
                 left: 25px !important;
                 width: 16px;
                 height: 16px;
             }
-            
+
             .timeline-content {
                 padding: 15px 18px;
             }
-            
+
             .service-icon {
                 width: 60px;
                 height: 60px;
                 font-size: 1.5rem;
             }
-            
+
             .btn-lg {
                 padding: 10px 30px !important;
                 font-size: 1rem !important;
             }
-            
+
             .custom-alert {
                 min-width: 280px;
                 right: 10px;
                 left: 10px;
             }
+
+            .navbar {
+                min-height: 55px !important;
+            }
+
+            .navbar-brand {
+                font-size: 1.1rem !important;
+            }
         }
 
         @media screen and (max-width: 400px) {
+
             /* Very small devices */
             .timeline-left,
             .timeline-right {
                 padding-left: 50px !important;
                 padding-right: 10px !important;
             }
-            
+
             .timeline::before {
                 left: 20px !important;
             }
-            
+
             .timeline-item::before {
                 left: 20px !important;
                 width: 14px;
                 height: 14px;
                 border-width: 3px;
             }
-            
+
             .timeline-content h4 {
                 font-size: 1rem;
             }
-            
+
             .timeline-content p {
                 font-size: 0.85rem;
             }
-            
+
             .navbar-brand span {
                 font-size: 0.9rem;
             }
         }
 
-        /* ===== MOBILE-SPECIFIC EXPERIENCE SECTION FIX ===== */
+        /* ===== REDUCE SECTION SPACING FOR MOBILE ===== */
         @media screen and (max-width: 768px) {
-            #experience .timeline {
-                padding: 20px 0;
+            .hero-section {
+                padding: 30px 15px !important;
             }
-            
-            #experience .timeline::before {
-                left: 30px;
-            }
-            
-            #experience .timeline-item::before {
-                left: 30px;
-            }
-            
-            #experience .timeline-left,
-            #experience .timeline-right {
-                padding-left: 70px;
-                padding-right: 20px;
-                text-align: left;
-            }
-            
-            #experience .timeline-content {
-                margin: 0;
-            }
-        }
 
-        /* ===== MOBILE-SPECIFIC EDUCATION SECTION FIX ===== */
-        @media screen and (max-width: 768px) {
-            #education .timeline {
-                padding: 20px 0;
+            .container.my-5.py-5 {
+                margin-top: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
             }
-            
-            #education .timeline::before {
-                left: 30px;
-            }
-            
-            #education .timeline-item::before {
-                left: 30px;
-            }
-            
-            #education .timeline-left,
-            #education .timeline-right {
-                padding-left: 70px;
-                padding-right: 20px;
-                text-align: left;
-            }
-            
-            #education .timeline-content {
-                margin: 0;
-            }
-        }
 
-        /* Fix for mobile offcanvas menu */
-        .offcanvas-body {
-            padding: 20px !important;
-        }
+            .section-heading {
+                margin-bottom: 1.5rem !important;
+            }
 
-        .offcanvas-body .navbar-nav {
-            gap: 10px !important;
-        }
+            .timeline {
+                margin: 20px auto !important;
+            }
 
-        .offcanvas-body .d-flex {
-            justify-content: center !important;
-            margin-top: 25px !important;
+            .service-card {
+                padding: 20px 15px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .contact-form {
+                padding: 20px !important;
+            }
+
+            .footer {
+                margin-top: 40px !important;
+            }
+
+            .footer p {
+                padding: 20px 0 !important;
+            }
         }
     
